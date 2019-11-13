@@ -305,10 +305,12 @@ function counterMaker() {
 function counterMakerWithLimit(max){
   let count = 0;
   function counter(){
-    if(count === max){
-      return count = 3;
+    if(count <= max){
+      count++;
+      return count -1
     }else{
-      return count++;
+      count = 0;
+      return count ++
     }
   }
   return counter;
